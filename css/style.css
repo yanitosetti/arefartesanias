@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.content{
+    max-width: 1780px;
+    margin: 5px 5px 5px 35px;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header  header  header"
+    "main    main    main"
+    "section section section"
+    "footer  footer  footer"   
+}
+
+
+.header{
+    grid-area: header;
+    color: black;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid orangered;
+    align-items: center;
+    padding: 1rem 0rem 0.5rem 0.5rem;
+}
+
+.header__img{
+    width: 50px;
+    height: 60px;
+}
+
+.header__ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__li{
+    padding: 10px;
+    text-transform: uppercase;
+
+}
+
+.header__li a{
+    text-decoration: none;
+}
+
+.header__nav{
+    font-size: 17px;
+    display: flex;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.main__nos{
+    text-align: center;
+}
+
+.main__section{
+    width: 60%;
+    margin-top: 5rem;
+}
+
+.main__tittle{
+    margin-bottom: 3rem;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main__nostitle{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.main__nostitle p{
+    margin: 5rem 10rem 5rem 10rem;
+    text-transform: full-size-kana;
+}
+
+.main p{
+    margin-bottom: 2rem;
+}
+.main__img{
+    width: 550px;
+    height: 400px;
+}
+/* STYLE BOTTON */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 1rem;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+/* STYLE BOTTON */
+
+.info{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.info h2{
+    margin-bottom: 3rem;
+}
+.info div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.info__card{
+    width: 300px;
+}
+
+.info__section{
+    display: flex;
+    justify-content: space-evenly
+
+}
+
+.info__card1{
+    width: 300px;
+}
+
+.info__img{
+    width: 340px;
+    height: 360px;
+    
+}
+
+.info__tittle{
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.section__nos{ /* Principal de la seccion Sobre nosotros, no me queda en el centro */
+    display: grid;
+    width: 80px;
+    margin-top: 5rem;   
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "ignacio  parrafo1"
+    "parrafo2 leandro"
+    "ellos    parrafo3";   
+}
+
+
+.footer{ /* FOOTER */
+    grid-area: footer;
+    display: flex;
+    color: black;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid orangered;
+    align-items: center;
+    padding: 1rem 0rem 0.5rem 0.5rem;
+}
+
+.footer__buscanos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__p{
+    margin-right: 2rem;
+}
+
+.footer img{
+    width: 30px;
+    height: 40px;
+}
+.content .main{
+    grid-area: main;
+}
+
+.content .footer{
+    grid-area: footer;
+}
+
+.ignacio{
+    grid-area: ignacio;
+    width: 80px;
+    text-align: inherit;
+    text-align: right;
+}
+
+.parrafo1{
+    grid-area: parrafo1;
+}
+
+.leandro{
+    grid-area: leandro;
+}
+
+.ellos{
+    grid-area: ellos;
+}
+
+.parrafo3{
+    grid-area: parrafo3;
+}
+
+/* MEDA QUERIES */
+
+@media (max-width: 320px){
+    body{
+        background-color: black;
+        grid-template-columns: 1fr;
+    }
+
+    
+}
